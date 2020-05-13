@@ -1,0 +1,256 @@
+@import "colors";
+@import "fonts";
+
+@keyframes display-task-added {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.9;
+  }
+
+  40% {
+    opacity: 0.5;
+  }
+
+  60% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ||General */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $primary-color;
+  color: white;
+  font-family: $font-raleway;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  line-height: 1.4rem;
+  min-width: 320px;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* || General styles */
+
+hr {
+  border-top: 1px solid white;
+}
+
+.card {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+.tile {
+  height: 100%;
+  line-height: 1;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+
+  @media (min-width: 676px) {
+    max-width: 40px;
+  }
+
+  &__hide {
+    background-color: $yellow-ligth;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &:hover {
+      opacity: 0;
+      animation: display-task-added 1 .4s linear;
+    }
+
+    // &.show {
+    //   opacity: 1;
+    //   animation: display-task-added 1 .4s linear;
+    // }
+  }
+
+  &__top,
+  &__bottom {
+    border-bottom: 1px solid $primary-color;
+    height: 35px;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .fa-circle {
+    font-size: 6px;
+    padding: 0 5px;
+  }
+
+  .blank {
+    display: block;
+    height: 40px;
+  }
+
+  &__num {
+
+    &--3,
+    &--5 {
+      .fa-circle:nth-child(1) {
+        padding: 0 18px;
+      }
+    }
+  }
+
+  &-players {
+    display: block;
+    max-width: 100%;
+
+    @media (min-width: 676px) {
+      max-width: 80%;
+      margin-left: auto;
+    }
+
+    .tile {
+      max-width: 100%;
+
+      @media (min-width: 676px) {
+        max-width: 60px;
+      }
+
+      &__top,
+      &__bottom {
+        height: 54px;
+        padding: 10px 0;
+      }
+
+      .fa-circle {
+        font-size: 10px;
+        padding: 0 5px;
+      }
+
+      &__num {
+
+        &--3,
+        &--5 {
+          .fa-circle:nth-child(3) {
+            padding: 0 18px;
+          }
+        }
+      }
+    }
+
+    .tile__hide {
+      background-color: $primary-color;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      &:hover {
+        animation: none !important;
+      }
+
+      // &.show {
+      //   opacity: 0;
+      //   animation: display-task-added 1 .4s linear;// }
+
+    }
+  }
+
+}
+
+.player {
+  border-top: 2px solid white;
+  padding-top: 10px;
+
+  &.winner {
+    background-color: $green;
+    padding: 20px;
+    transition: all 4 linear;
+
+    h4 {
+      text-align: center;
+      font-size: 2rem;
+      transition: all 4 linear;
+    }
+  }
+}
+
+.play {
+  display: block;
+  max-width: 100%;
+
+  @media (min-width: 676px) {
+    max-width: 80%;
+    margin-left: auto;
+  }
+}
+
+.console {
+  background-color: white;
+
+}
+
+.pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+/* || Footer */
+
+footer {
+  min-width: 320px;
+
+  .card {
+    background-color: rgba(#28a745, 0.1);
+    padding: 0;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      .fa-html5 {
+        color: #e44d26;
+      }
+
+      .fa-css3-alt {
+        color: #1a73ba;
+      }
+
+      .fa-sass {
+        color: #cf649a;
+      }
+
+      .fa-bootstrap {
+        color: #563d7c;
+      }
+
+      .fa-php {
+        color: #8892BF;
+      }
+    }
+  }
+}
