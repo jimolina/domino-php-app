@@ -91,7 +91,7 @@
       </div>
       <div class="col-12 text-center">
         <a
-          href="https://github.com/jimolina/covid19-react-app"
+          href="https://github.com/jimolina/domino-php-app"
           class="text-white"
           target="_Blank"
           rel="noopener noreferrer"
@@ -101,7 +101,7 @@
         <p class="card-text">
           Get the code in 
           <a
-            href="https://github.com/jimolina/covid19-react-app"
+            href="https://github.com/jimolina/domino-php-app"
             class="text-white"
             target="_Blank"
             rel="noopener noreferrer"
